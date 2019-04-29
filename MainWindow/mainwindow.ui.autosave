@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1661</width>
+    <height>792</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>OQC检测</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>10</y>
+      <width>471</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>产品1</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>10</y>
+      <width>461</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>产品2</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>330</y>
+      <width>471</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>产品3</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>330</y>
+      <width>461</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>产品4</string>
+    </property>
+   </widget>
+   <widget class="QToolBox" name="toolBox">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>291</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>4</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>291</width>
+       <height>406</height>
+      </rect>
+     </property>
+     <attribute name="icon">
+      <iconset resource="F:/Project/Qt/MCTS/Project5_1/Project8/MCTS/res.qrc">
+       <normaloff>:/images/icons/824.bmp</normaloff>:/images/icons/824.bmp</iconset>
+     </attribute>
+     <attribute name="label">
+      <string>机型选择</string>
+     </attribute>
+     <widget class="QComboBox" name="comboBox_Resources">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>40</y>
+        <width>161</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>IT64331B</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>GPIB0::5::INSTR</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>75</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>程控电源1：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>130</y>
+        <width>90</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>继电器串口：</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_Relay32">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>130</y>
+        <width>151</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>75</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>程控电源2：</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_Resources_2">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>80</y>
+        <width>161</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>IT64331B</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>GPIB0::5::INSTR</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="btnAdd_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>310</y>
+        <width>151</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>添加GPIB口的仪表</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>291</width>
+       <height>406</height>
+      </rect>
+     </property>
+     <attribute name="icon">
+      <iconset resource="F:/Project/Qt/MCTS/Project5_1/Project8/MCTS/res.qrc">
+       <normaloff>:/images/icons/304.bmp</normaloff>:/images/icons/304.bmp</iconset>
+     </attribute>
+     <attribute name="label">
+      <string>串口配置</string>
+     </attribute>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>10</y>
+        <width>201</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QComboBox" name="PortCom1"/>
+       </item>
+       <item row="0" column="1">
+        <widget class="QCheckBox" name="checkBox">
+         <property name="text">
+          <string>1路串口</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QComboBox" name="PortCom2"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QCheckBox" name="checkBox_2">
+         <property name="text">
+          <string>2路串口</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QComboBox" name="PortCom3"/>
+       </item>
+       <item row="2" column="1">
+        <widget class="QCheckBox" name="checkBox_3">
+         <property name="text">
+          <string>3路串口</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QComboBox" name="PortCom4"/>
+       </item>
+       <item row="3" column="1">
+        <widget class="QCheckBox" name="checkBox_4">
+         <property name="text">
+          <string>4路串口</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QComboBox" name="PortCom5"/>
+       </item>
+       <item row="4" column="1">
+        <widget class="QCheckBox" name="checkBox_5">
+         <property name="text">
+          <string>5路串口</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QComboBox" name="PortCom6"/>
+       </item>
+       <item row="5" column="1">
+        <widget class="QCheckBox" name="checkBox_6">
+         <property name="text">
+          <string>6路串口</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QComboBox" name="PortCom7"/>
+       </item>
+       <item row="6" column="1">
+        <widget class="QCheckBox" name="checkBox_7">
+         <property name="text">
+          <string>7路串口</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QComboBox" name="PortCom8"/>
+       </item>
+       <item row="7" column="1">
+        <widget class="QCheckBox" name="checkBox_8">
+         <property name="text">
+          <string>8路串口</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>291</width>
+       <height>406</height>
+      </rect>
+     </property>
+     <attribute name="icon">
+      <iconset resource="F:/Project/Qt/MCTS/Project5_1/Project8/MCTS/res.qrc">
+       <normaloff>:/images/icons/125.bmp</normaloff>:/images/icons/125.bmp</iconset>
+     </attribute>
+     <attribute name="label">
+      <string>多路控制</string>
+     </attribute>
+     <widget class="QWidget" name="layoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>211</width>
+        <height>203</height>
+       </rect>
+      </property>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <widget class="QCheckBox" name="checkBox_start_1">
+         <property name="text">
+          <string>线程1启、停</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QCheckBox" name="checkBox_start_2">
+         <property name="text">
+          <string>线程2启、停</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QCheckBox" name="checkBox_start_3">
+         <property name="text">
+          <string>线程3启、停</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QCheckBox" name="checkBox_start_4">
+         <property name="text">
+          <string>线程4启、停</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QCheckBox" name="checkBox_start_5">
+         <property name="text">
+          <string>线程5启、停</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QCheckBox" name="checkBox_start_6">
+         <property name="text">
+          <string>线程6启、停</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QCheckBox" name="checkBox_start_7">
+         <property name="text">
+          <string>线程7启、停</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QCheckBox" name="checkBox_start_8">
+         <property name="text">
+          <string>线程8启、停</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>291</width>
+       <height>406</height>
+      </rect>
+     </property>
+     <attribute name="icon">
+      <iconset resource="F:/Project/Qt/MCTS/Project5_1/Project8/MCTS/res.qrc">
+       <normaloff>:/images/icons/1.png</normaloff>:/images/icons/1.png</iconset>
+     </attribute>
+     <attribute name="label">
+      <string>登录管理</string>
+     </attribute>
+     <widget class="QWidget" name="layoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>161</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="btnAdd">
+         <property name="text">
+          <string>添加用户</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnDel">
+         <property name="text">
+          <string>删除用户</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnUpdate">
+         <property name="text">
+          <string>修改密码</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>291</width>
+       <height>406</height>
+      </rect>
+     </property>
+     <attribute name="icon">
+      <iconset resource="F:/Project/Qt/MCTS/Project5_1/Project8/MCTS/res.qrc">
+       <normaloff>:/images/icons/410.bmp</normaloff>:/images/icons/410.bmp</iconset>
+     </attribute>
+     <attribute name="label">
+      <string>基本信息</string>
+     </attribute>
+     <widget class="QLabel" name="label_26">
+      <property name="geometry">
+       <rect>
+        <x>148</x>
+        <y>63</y>
+        <width>16</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>148</x>
+        <y>37</y>
+        <width>16</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>170</y>
+        <width>171</width>
+        <height>79</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_18">
+         <property name="text">
+          <string>休眠电流测量</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QSpinBox" name="spinBox_sleepTestTimes"/>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_41">
+         <property name="text">
+          <string>次</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_caliTimes_2">
+         <property name="text">
+          <string>休眠电流校核</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QSpinBox" name="spinBox_sleepCalibTimes"/>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="label_40">
+         <property name="text">
+          <string>次</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_caliTimes_16">
+         <property name="text">
+          <string>休眠稳定时间</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QSpinBox" name="spinBox_sleepstabletime"/>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLabel" name="label_42">
+         <property name="text">
+          <string>秒</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>260</y>
+        <width>171</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_caliTimes_6">
+         <property name="text">
+          <string>充电电流校核</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>次</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QSpinBox" name="spinBox_chargestabletime"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QSpinBox" name="spinBox_chargeCalibTimes"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_caliTimes_7">
+         <property name="text">
+          <string>充电稳定时间</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QSpinBox" name="spinBox_chargeTestTimes"/>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>次</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_caliTimes_5">
+         <property name="text">
+          <string>充电电流测试</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLabel" name="label_16">
+         <property name="text">
+          <string>秒</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>171</width>
+        <height>79</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_17">
+         <property name="text">
+          <string>待机电流测量</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QSpinBox" name="spinBox_waitTestTimes"/>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_44">
+         <property name="text">
+          <string>次</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_caliTimes">
+         <property name="text">
+          <string>待机电流校核</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QSpinBox" name="spinBox_waitCalibTimes"/>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="label_45">
+         <property name="text">
+          <string>次</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_caliTimes_17">
+         <property name="text">
+          <string>待机稳定时间</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QSpinBox" name="spinBox_waitstabletime"/>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLabel" name="label_43">
+         <property name="text">
+          <string>秒</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_7">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>11</y>
+        <width>184</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_constVolt">
+         <property name="text">
+          <string>备用恒定电压</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QDoubleSpinBox" name="doubleSpinBox_volt"/>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_25">
+         <property name="text">
+          <string>V</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_37">
+         <property name="text">
+          <string>测试判定条件</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEdit_condition"/>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1661</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionsetting"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionsetting">
+   <property name="icon">
+    <iconset resource="../res.qrc">
+     <normaloff>:/images/Settings.png</normaloff>:/images/Settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>设置</string>
+   </property>
+   <property name="toolTip">
+    <string>设置</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../res.qrc"/>
+  <include location="F:/Project/Qt/MCTS/Project5_1/Project8/MCTS/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

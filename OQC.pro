@@ -34,7 +34,11 @@ SOURCES += \
     LogIn/qdlglogin.cpp \
     DataBase/database.cpp \
     INI/ini.cpp \
-    Setting/qwdialogconfig.cpp
+    Setting/qwdialogconfig.cpp \
+    LogIn/qwdialogAdd.cpp \
+    LogIn/qwdialogDelete.cpp \
+    LogIn/qwdialogUpdate.cpp \
+    Thread/qsubthread_1.cpp
 
 HEADERS += \
     MainWindow/mainwindow.h \
@@ -53,13 +57,20 @@ HEADERS += \
     Test_Current/Relay32.h \
     INI/ini.h \
     INI/ini.h \
-    Setting/qwdialogconfig.h
+    Setting/qwdialogconfig.h \
+    LogIn/qwdialogAdd.h \
+    LogIn/qwdialogDelete.h \
+    LogIn/qwdialogUpdate.h \
+    Thread/qsubthread_1.h
 
 FORMS += \
     MainWindow/mainwindow.ui \
     LogIn/qdlglogin.ui \
     Setting/qwdialogconfig.ui \
-    Setting/qwdialogconfig.ui
+    Setting/qwdialogconfig.ui \
+    LogIn/qwdialogAdd.ui \
+    LogIn/qwdialogDelete.ui \
+    LogIn/qwdialogUpdate.ui
 
 
 # 配置图标（仅Windows有效）
