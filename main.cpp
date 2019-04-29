@@ -8,7 +8,6 @@
 #include <LogIn/qdlglogin.h>
 
 
-
 /*************************************************************
 作者：刘维球
 时间：2019年4月28日14:17:09
@@ -17,6 +16,10 @@
 参数2：
 ***********************************************************************/
 
+int Number()
+{
+   return 6 ;
+}
 
 #define LOGFILEMAX 20 //最大行数
 void outputMessage(QtMsgType type, const QMessageLogContext &context, const QString &msg)
