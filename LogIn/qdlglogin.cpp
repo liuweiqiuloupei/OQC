@@ -54,13 +54,24 @@ QDlgLogin::~QDlgLogin()
     delete ui;
 }
 
+QString QDlgLogin::getUserName()
+{
+    return this->username ;
+}
+
+int QDlgLogin::getUserGrade()
+{
+    return this->UserGrade ;
+}
+
 void QDlgLogin::on_btnOK_clicked()
 {//"确定"按钮相应
 
     username=ui->editUser->text().trimmed();
     pwd = ui->editPSWD->text();
+    //qDebug() << encrypt(pwd) << endl ; //刘维球，
 
-    QString selectstatement(QString("select User_NameMD5 from dbo.OQC_Engineers where User_Name = '%1'").arg(username)) ;
+    QString selectstatement(QString("select UserPWDMD5 from GPSTest.dbo.MES_OQC_Engineers where UserName = '%1'").arg(username)) ;
     QSqlQuery query(this->logDB->getDBName());
     query.exec(selectstatement);
     if(query.next())
@@ -84,10 +95,5 @@ void QDlgLogin::on_btnOK_clicked()
 void QDlgLogin::on_btnCancel_clicked()
 {
     this->reject();
-}
-
-QString QDlgLogin::logName()
-{
-    return  username;
 }
 

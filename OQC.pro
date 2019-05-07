@@ -9,6 +9,7 @@
 QT       += core gui
 QT       += sql
 QT       += serialport
+QT       += network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -34,11 +35,7 @@ SOURCES += \
     LogIn/qdlglogin.cpp \
     DataBase/database.cpp \
     INI/ini.cpp \
-    Setting/qwdialogconfig.cpp \
-    LogIn/qwdialogAdd.cpp \
-    LogIn/qwdialogDelete.cpp \
-    LogIn/qwdialogUpdate.cpp \
-    Thread/qsubthread_1.cpp
+    Setting/qwdialogconfig.cpp
 
 HEADERS += \
     MainWindow/mainwindow.h \
@@ -57,20 +54,13 @@ HEADERS += \
     Test_Current/Relay32.h \
     INI/ini.h \
     INI/ini.h \
-    Setting/qwdialogconfig.h \
-    LogIn/qwdialogAdd.h \
-    LogIn/qwdialogDelete.h \
-    LogIn/qwdialogUpdate.h \
-    Thread/qsubthread_1.h
+    Setting/qwdialogconfig.h
 
 FORMS += \
     MainWindow/mainwindow.ui \
     LogIn/qdlglogin.ui \
     Setting/qwdialogconfig.ui \
-    Setting/qwdialogconfig.ui \
-    LogIn/qwdialogAdd.ui \
-    LogIn/qwdialogDelete.ui \
-    LogIn/qwdialogUpdate.ui
+    Setting/qwdialogconfig.ui
 
 
 # 配置图标（仅Windows有效）
@@ -106,15 +96,10 @@ RESOURCES += \
     res.qrc
 
 
-INCLUDEPATH += $$PWD/../build-OQC-Desktop_Qt_5_12_0_MinGW_64_bit-Debug/debug
-DEPENDPATH += $$PWD/../build-OQC-Desktop_Qt_5_12_0_MinGW_64_bit-Debug/debug
 
 
 
-INCLUDEPATH += $$PWD/../build-OQC-Desktop_Qt_5_12_0_MinGW_64_bit-Debug/debug
-DEPENDPATH += $$PWD/../build-OQC-Desktop_Qt_5_12_0_MinGW_64_bit-Debug/debug
 
 
 
-INCLUDEPATH += $$PWD/../build-OQC-Desktop_Qt_5_12_0_MinGW_64_bit-Debug/debug
-DEPENDPATH += $$PWD/../build-OQC-Desktop_Qt_5_12_0_MinGW_64_bit-Debug/debug
+

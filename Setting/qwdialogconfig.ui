@@ -139,6 +139,32 @@
     <string>订单号：</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="btnok">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>700</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>确定</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btncancel">
+   <property name="geometry">
+    <rect>
+     <x>1170</x>
+     <y>700</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>取消</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

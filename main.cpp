@@ -78,14 +78,15 @@ int main(int argc, char *argv[])
 
     QApplication a(argc, argv);
 
-    qInstallMessageHandler(outputMessage);
+    //qInstallMessageHandler(outputMessage);
 
     QDlgLogin   *dlgLogin=new QDlgLogin; //创建对话框
     if (dlgLogin->exec()==QDialog::Accepted)//意思是如果，login登录成功，就跳转到主界面上去。
     {
-        QString username = dlgLogin->logName();
+        QString username = dlgLogin->getUserName();
 
         MainWindow w;
+        w.setUserName(username);
         w.show();
 
         return a.exec();
