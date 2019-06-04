@@ -18,6 +18,9 @@ public:
 
     QStringList getConnLogInfo();//刘维球，获取数据库的链接信息，2019年4月28日11:08:25
 
+    QString getLoginTable(const QString LogInfoIni);    //梁家榕：获取登录表名
+    QStringList getConfigTable(const QString configFile);   //梁家榕：获取配置表链接信息
+    QStringList getResultTable(const QString configFile);   //梁家榕：获取结果表链接信息
 private:
 
 

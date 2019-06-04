@@ -36,12 +36,8 @@ QDlgLogin::QDlgLogin(QWidget *parent) :
 
     logDB = new Database("logUI");
 
-    logDB->connectLogInfoDb();
-    if(logDB->connectLogInfoDb()) //lwq:连接数据库是否成功
-    {
-        logDB->createLogTable("dbo.OQC_Engineers");
-    }
-    else
+
+    if(!logDB->connectLogInfoDb()) //lwq:连接数据库是否成功
     {
         QMessageBox::warning(this,"连接数据库","连接失败");
     }
@@ -67,28 +63,49 @@ int QDlgLogin::getUserGrade()
 void QDlgLogin::on_btnOK_clicked()
 {//"确定"按钮相应
 
-    username=ui->editUser->text().trimmed();
-    pwd = ui->editPSWD->text();
-    //qDebug() << encrypt(pwd) << endl ; //刘维球，
+    username=ui->editUser->text().trimmed();        //输入的账号
+    pwd = ui->editPSWD->text();                     //输入的密码
 
-    QString selectstatement(QString("select UserPWDMD5 from GPSTest.dbo.MES_OQC_Engineers where UserName = '%1'").arg(username)) ;
-    QSqlQuery query(this->logDB->getDBName());
-    query.exec(selectstatement);
-    if(query.next())
+    INISETTINGS  iniSettings; //刘维球，初始化设置，2019年4月28日11:07:50
+    QString appDir = QApplication::applicationDirPath(); ////刘维球：当前程序路径，2019年4月28日09:21:02
+    const QString  configFile = appDir + "/config.ini" ; ////刘维球，config.ini路径
+    QFile file(configFile);
+
+    if( file.exists())
     {
-       QString sqlpwd  = query.value(0).toString();
-       QString sqlpwdMd5  = encrypt(pwd);
-       qDebug() << sqlpwdMd5 << endl ;
-       if(sqlpwd == sqlpwdMd5)
-       {
-          logDB->disconnDb();
-          this->accept();
-       }
+
+        QString tableName = iniSettings.getLoginTable (configFile);//梁家榕：获取ini文件的表名
+        QString selectstatement(QString("select UserPWDMD5, UserGrade from %1 where UserName = '%2'").arg (tableName).arg(username)) ;
+        QSqlQuery query(this->logDB->getDBName());
+        query.exec(selectstatement);
+        if(query.next())
+        {
+            UserGrade = query.value(1).toInt ();        //获取账号权限
+            QString sqlpwd  = query.value(0).toString();
+            QString sqlpwdMd5  = encrypt(pwd);
+            qDebug() << sqlpwdMd5 << endl ;
+            if(sqlpwd == sqlpwdMd5)
+            {
+               logDB->disconnDb();
+               this->accept();
+            }
+            else
+            {
+                QMessageBox::warning(this, "错误提示", "用户名或密码错误");
+            }
+        }
+        else
+        {
+           QMessageBox::warning(this, "错误提示", "用户名或密码错误");
+        }
     }
     else
     {
-       QMessageBox::warning(this, "错误提示", "用户名或密码错误");
+
+          QMessageBox::warning(this, "错误提示", "查看当前路径下的工程文件是否存在！");
+          return ;
     }
+
 }
 
 

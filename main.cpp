@@ -7,6 +7,20 @@
 #include <QTextStream>
 #include <LogIn/qdlglogin.h>
 
+#include "Setting/qwdialogconfig.h"
+
+QStringList ConfigType;         //梁家榕：指令类型
+QStringList ConfigName;         //梁家榕：指令名字
+QStringList ConfigReturn;       //梁家榕：指令返回值
+QStringList ConfigPara;         //梁家榕：指令参数
+QStringList ConfigSend;         //梁家榕：发送指令
+
+QString SoftWareName;   //梁家榕：订单号
+bool isOpenCheck;       //梁家榕：查看配置窗口是否打开
+QString MachineName;    //梁家榕：机型
+QString Station;        //梁家榕：所有配置信息
+
+//bool ComInit[4];   //莫秋兰 RDA串口
 
 /*************************************************************
 作者：刘维球
@@ -15,11 +29,6 @@
 参数1：
 参数2：
 ***********************************************************************/
-
-int Number()
-{
-   return 6 ;
-}
 
 #define LOGFILEMAX 20 //最大行数
 void outputMessage(QtMsgType type, const QMessageLogContext &context, const QString &msg)
@@ -73,10 +82,13 @@ void outputMessage(QtMsgType type, const QMessageLogContext &context, const QStr
 
 int main(int argc, char *argv[])
 {
-    //QTextCodec *codec = QTextCodec::codecForName("UTF-8");
-    //QTextCodec::setCodecForLocale(codec); //解决汉字乱码问题
+    QTextCodec *codec = QTextCodec::codecForName("UTF-8");
+    QTextCodec::setCodecForLocale(codec); //解决汉字乱码问题
 
     QApplication a(argc, argv);
+    QTranslator translator;
+    translator.load(":/images/widgets.qm");
+    a.installTranslator(&translator)  ;
 
     //qInstallMessageHandler(outputMessage);
 
@@ -84,9 +96,11 @@ int main(int argc, char *argv[])
     if (dlgLogin->exec()==QDialog::Accepted)//意思是如果，login登录成功，就跳转到主界面上去。
     {
         QString username = dlgLogin->getUserName();
+        int usergrade = dlgLogin->getUserGrade ();      //获取账户权限
 
         MainWindow w;
         w.setUserName(username);
+        w.SetUserGrade (usergrade);
         w.show();
 
         return a.exec();

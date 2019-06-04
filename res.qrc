@@ -3,7 +3,17 @@
         <file>images/Connect.png</file>
         <file>images/Help.png</file>
         <file>images/icon1.ico.jpg</file>
-        <file>images/Settings.png</file>
         <file>images/Tools.ico</file>
+        <file>images/Settings.png</file>
+        <file>images/switch.png</file>
+        <file>images/lock.png</file>
+        <file>images/unlock.png</file>
+        <file>images/search.PNG</file>
+        <file>images/searching.png</file>
+        <file>images/start.png</file>
+        <file>images/stop.png</file>
+        <file>images/widgets.qm</file>
+        <file>images/reSerial.png</file>
+        <file>images/voice.PNG</file>
     </qresource>
 </RCC>

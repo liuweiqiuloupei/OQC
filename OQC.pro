@@ -10,6 +10,7 @@ QT       += core gui
 QT       += sql
 QT       += serialport
 QT       += network
+QT       += texttospeech #语音模块
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -35,7 +36,10 @@ SOURCES += \
     LogIn/qdlglogin.cpp \
     DataBase/database.cpp \
     INI/ini.cpp \
-    Setting/qwdialogconfig.cpp
+    Setting/qwdialogconfig.cpp \
+    OQCSerial/oqcserial.cpp \
+    Setting/checkconfigdialog.cpp \
+    Voice/voice.cpp
 
 HEADERS += \
     MainWindow/mainwindow.h \
@@ -54,13 +58,19 @@ HEADERS += \
     Test_Current/Relay32.h \
     INI/ini.h \
     INI/ini.h \
-    Setting/qwdialogconfig.h
+    Setting/qwdialogconfig.h \
+    OQCSerial/oqcserial.h \
+    Setting/checkconfigdialog.h \
+    Voice/voice.h
 
 FORMS += \
     MainWindow/mainwindow.ui \
     LogIn/qdlglogin.ui \
     Setting/qwdialogconfig.ui \
-    Setting/qwdialogconfig.ui
+    Setting/qwdialogconfig.ui \
+    Setting/checkconfigdialog.ui \
+    MainWindow/mainwindow_copy.ui \
+    Voice/voice.ui
 
 
 # 配置图标（仅Windows有效）
@@ -94,6 +104,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     res.qrc
+
+DISTFILES +=
 
 
 
